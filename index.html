@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="todo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>To-Do</title>
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="heading">
+            <img class="heading_img" src="imagens/laptop.png" alt="laptop">
+            <h1 class="heading_title">Lista de Tarefas</h1>
+        </div>
+        <form class="form">
+            <div>
+                <label class="form_label" for="todo">~ Hoje eu preciso fazer ~</label>
+                <input class="form_input" type="text" id="todo" name="to-do" size="30" required>
+                <button class="button"><span>Enviar</span></button>
+            </div>
+        </form>
+        <div>
+            <ul class="toDoList">
+            </ul>
+        </div>
+    </section>
+    <script src="todo.js"></script>
+</body>
+
+</html>

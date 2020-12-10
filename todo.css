@@ -1,0 +1,153 @@
+body {
+    background-color: #a39bd2;
+    min-height: 70vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(198, 1%, 29%);
+    font-family: 'Nanum Pen Script', cursive;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 500px) {
+    body {
+        min-height: 100vh;
+    }
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    max-width: 500px;
+    min-width: 250px;
+    background: #fff;
+    background-image: radial-gradient(#bfc0c1 7%, transparent 0);
+    background-size: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 7px 2px #333;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.heading_title {
+    transform: rotate(2deg);
+    padding: 0.2rem 1.2rem;
+    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+    background-color: hsla(300, 100%, 50%, 0.7);
+}
+
+@media only screen and (min-width: 500px) {
+    .heading_title {
+        font-size: 2rem;
+    }
+}
+
+.heading_img {
+    width: 24%;
+}
+
+.form_label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.form_input {
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 0.7rem;
+    border-bottom-right-radius: 15px 3px;
+    border-bottom-left-radius: 3px 15px;
+    border: solid 3px transparent;
+    border-bottom: dashed 3px #ea95e0;
+    font-family: inherit;
+    font-size: 1.2rem;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.form_input:focus {
+    outline: none;
+    border: solid 3px #ea95e0;
+}
+
+@media only screen and (min-width: 500px) {
+    .form_input {
+        width: 60%;
+    }
+}
+
+.button {
+    padding: 0;
+    border: none;
+    transform: rotate(4deg);
+    font-family: inherit;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 hsl(198, 1%, 29%);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: hsla(300, 100%, 50%, 0.7);
+}
+
+.button span {
+    font-size: 1.2rem;
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid hsl(198, 1%, 29%);
+}
+
+.button:active,
+.button:focus {
+    transform: translateY(4px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+
+.toDoList {
+    text-align: left;
+}
+
+.toDoList li {
+    position: relative;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: ease-in color;
+}
+
+.toDoList li:hover {
+    color: hsl(240, 1%, 13%);
+}
+
+.toDoList description:focus {
+    font-weight: 600;
+}
+
+.btn {
+    font-family: inherit;
+    border: none;
+    background: none;
+    padding-left: 20px;
+    cursor: pointer;
+    transform: rotate(6deg);
+    transition: transform 2s;
+}
+
+.btn:hover {
+    color: #333;
+    font-weight: 700;
+    transform: rotate(30deg);
+}
