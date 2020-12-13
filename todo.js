@@ -1,7 +1,9 @@
+const BASE_URL = 'https://kel-todo-backend.herokuapp.com'
+
 // CRUD
 //C - create
 const createToDo = async(description) => {
-    await fetch("http://localhost:8080/todo", {
+    await fetch(`${BASE_URL}/todo`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -15,7 +17,7 @@ const createToDo = async(description) => {
 
 //R - read
 const getToDos = async() => { //Faz a consulta no banco
-    resp = await fetch("http://localhost:8080/todo");
+    resp = await fetch(`${BASE_URL}/todo`);
     const toDos = await resp.json();
 
     const ul = document.querySelector("ul");
@@ -50,7 +52,7 @@ const getToDos = async() => { //Faz a consulta no banco
 
 //U - update
 const updateToDo = async(todo) => {
-    await fetch(`http://localhost:8080/todo/${todo.id}`, {
+    await fetch(`${BASE_URL}/todo/${todo.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -63,7 +65,7 @@ const updateToDo = async(todo) => {
 };
 
 const toggleToDo = async(todo) => {   //o toggle serve para alternar uma situação (marcar/desmarcar o done)
-    await fetch(`http://localhost:8080/todo/${todo.id}`, {
+    await fetch(`${BASE_URL}/todo/${todo.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -79,7 +81,7 @@ const toggleToDo = async(todo) => {   //o toggle serve para alternar uma situaç
 
 //D - delete
 const deleteToDo = async(id) => {
-    await fetch(`http://localhost:8080/todo/${id}`, {
+    await fetch(`${BASE_URL}/todo/${id}`, {
         method: "DELETE",
         headers: {
             Accept: "application/json",
